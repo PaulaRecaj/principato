@@ -16,7 +16,7 @@
         element.value = 'tu@email';
       }
     }
-    
+
     // Ejercicio 3
     document.addEventListener('DOMContentLoaded', function() {
       let combo = document.getElementById('combobox');
@@ -25,6 +25,13 @@
         console.log(`Has seleccionado: ${micombo.options[micombo.selectedIndex].text}`);
       });
     });
+
+    //Ejercicio 4
+    function log(evento){
+      evento.preventDefault(); 
+      document.getElementById('user').value = 'tu@email'; 
+      document.getElementById('pass').value = '';
+    }
 </script>
 </head>
 <body>
@@ -48,7 +55,7 @@
      <h3>Last Recipies</h3>
     </div>
     </div>
-  <div id="login"><form id="form" method="post" action="http://YOUR_DOMAIN_HERE/login/login.php" onsubmit="event.preventDefault(); document.getElementById('user').value = 'tu@email'; document.getElementById('pass').value = '';">
+  <div id="login"><form id="form" method="post" action="http://YOUR_DOMAIN_HERE/login/login.php" onsubmit="log(event)">
   Username: <input type="text" name="username" size="15" id="user" value="tu@email" onfocus="despejar(this)" onblur="restaurar(this)" /><br /><br />
   Password: <input type="password" name="passwort" id="pass" size="15" /><br />
   <div align="center">
