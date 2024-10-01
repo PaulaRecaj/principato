@@ -4,6 +4,17 @@
   <meta charset="utf-8" />
   <title>Principato Italian Cuisine</title>
   <link href="css/style.css" rel="stylesheet" />
+  <script>
+    // Ejercicio 3
+    document.addEventListener('DOMContentLoaded', function() {
+      let combo = document.getElementById('combobox');
+      combo.addEventListener('change', function(event) {
+            let micombo = event.target;
+            micombo.options[micombo.selectedIndex].text; // Obtener el texto de la opción seleccionada
+            console.log(`Has seleccionado: ${micombo}`); // Mostrar en consola
+        });
+    });
+</script>
 </head>
 <body>
 <div class="container">
