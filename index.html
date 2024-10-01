@@ -27,7 +27,7 @@
     </div>
     </div>
   <div id="login"><form id="form" method="post" action="http://YOUR_DOMAIN_HERE/login/login.php">
-  Username: <input type="text" name="username" size="15" id="user" value="tu@email" onfocus="clear(this);" onblur="restore(this, 'tu@email');" /><br /><br />
+  Username: <input type="text" name="username" size="15" id="user" value="tu@email" onfocus="if(this.value === 'tu@email') {this.value = '';};" onblur="if(this.value === '') {this.value = 'tu@email';};" /><br /><br />
   Password: <input type="password" name="passwort" id="pass" size="15" /><br />
   <div align="center">
   <br /><input type="submit" value="Login" />
