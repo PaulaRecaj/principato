@@ -108,13 +108,13 @@ Aenean vitae leo vitae diam pellentesque bibendum eu facilisis erat.<p align="ce
 <!-- Free template distributed by http://freehtml5templates.com -->
 <script>
   function clear(element){
-    if (element.value == 'tu@email') {
+    if (element.value === 'tu@email') {
       element.value = '';
     }
   }
-
+  
   function restore(element, defaultValue) {
-    if (element.value == '') {
+    if (element.value === '') {
       element.value = defaultValue;
     }
   }
