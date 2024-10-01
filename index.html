@@ -5,6 +5,18 @@
   <title>Principato Italian Cuisine</title>
   <link href="css/style.css" rel="stylesheet" />
   <script>
+    //Ejercicio 2
+    function despejar(element) {
+      if (element.value === 'tu@email') {
+        element.value = '';
+      }
+    }
+    function restaurar(element) {
+      if (element.value === '') {
+        element.value = 'tu@email';
+      }
+    }
+    
     // Ejercicio 3
     document.addEventListener('DOMContentLoaded', function() {
       let combo = document.getElementById('combobox');
@@ -37,7 +49,7 @@
     </div>
     </div>
   <div id="login"><form id="form" method="post" action="http://YOUR_DOMAIN_HERE/login/login.php" onsubmit="event.preventDefault(); document.getElementById('user').value = 'tu@email'; document.getElementById('pass').value = '';">
-  Username: <input type="text" name="username" size="15" id="user" value="tu@email" onfocus="if(this.value === 'tu@email') {this.value = '';};" onblur="if(this.value === '') {this.value = 'tu@email';};" /><br /><br />
+  Username: <input type="text" name="username" size="15" id="user" value="tu@email" onfocus="despejar(this)" onblur="restaurar(this)" /><br /><br />
   Password: <input type="password" name="passwort" id="pass" size="15" /><br />
   <div align="center">
   <br /><input type="submit" value="Login" />
