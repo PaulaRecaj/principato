@@ -27,8 +27,8 @@
     });
 
     //Ejercicio 4
-    function log(evento){
-      evento.preventDefault(); 
+    function log(){
+      event.preventDefault(); 
       document.getElementById('user').value = 'tu@email'; 
       document.getElementById('pass').value = '';
     }
@@ -55,7 +55,7 @@
      <h3>Last Recipies</h3>
     </div>
     </div>
-  <div id="login"><form id="form" method="post" action="http://YOUR_DOMAIN_HERE/login/login.php" onsubmit="log(event)">
+  <div id="login"><form id="form" method="post" action="http://YOUR_DOMAIN_HERE/login/login.php" onsubmit="log()">
   Username: <input type="text" name="username" size="15" id="user" value="tu@email" onfocus="despejar(this)" onblur="restaurar(this)" /><br /><br />
   Password: <input type="password" name="passwort" id="pass" size="15" /><br />
   <div align="center">
