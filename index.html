@@ -5,6 +5,15 @@
   <title>Principato Italian Cuisine</title>
   <link href="css/style.css" rel="stylesheet" />
   <script>
+    //Ejercicio 1
+    function inicializarGestores() {
+      var imagen = document.getElementById("imagen");
+      imagen.onclick= function(){
+        alert("Has hecho click en la imagen");
+      }
+    }
+    window.onload=inicializarGestores;
+
     //Ejercicio 2
     function despejar(element) {
       if (element.value === 'tu@email') {
@@ -32,6 +41,15 @@
       document.getElementById('user').value = 'tu@email'; 
       document.getElementById('pass').value = '';
     }
+
+    //Ejercicio 5
+    const imagenes = [
+      "images/fresas.jpg",
+      'images/limones.jpg'
+    ]
+    function carrusel(){
+
+    }
 </script>
 </head>
 <body>
@@ -49,7 +67,7 @@
       <div class="navbutton"><a href="...">Home Page </a></div>           
     </nav> 
       
-    <div class="photo" id="image" onclick="alert('¡Has hecho clik en una imagen!')">
+    <div class="photo" id="image">
     <div class="content">
      </nav> 
      <h3>Last Recipies</h3>
