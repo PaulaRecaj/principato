@@ -62,7 +62,7 @@
         clearInterval(interval); 
       });
       elemento.addEventListener('mouseup', function() {
-        interval = setInterval(cambiarImagen, 3000); // Reanudar el carrusel
+        interval = setInterval(cambiarImagen, 3000); 
       });
       elemento.style.backgroundImage = `url(${imagenes[indiceAct]})`;
     }
