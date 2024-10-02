@@ -65,9 +65,6 @@
         elemento.oncl
         interval = setInterval(cambiarImagen, 3000); 
       });
-      elemento.addEventListener('click', function() {
-        alert("Has hecho click en la imagen");
-      });
       elemento.style.backgroundImage = `url(${imagenes[indiceAct]})`;
     }
     window.onload=gestorEventos;
