@@ -40,15 +40,31 @@
         document.getElementById("user").value = "tu@email"; 
         document.getElementById("pass").value = "";
       }
-      
-      //Ejercicio 5
-      //const imagenes = [
-       // "images/fresas.jpg",
-        //'images/limones.jpg'
-      //]
-      //function carrusel(){
 
-      //}
+      //Ejercicio 5
+      const imagenes = [
+        "images/heade_ft.jpg",
+        "images/fresas.jpg",
+        "images/limon.jpg",
+        "images/mandarinas.jpg",
+        "images/manzanas.jpg",
+        "images/melon.jpg",
+        "images/sesamo.jpg"
+      ];
+      let indiceAct = 0; 
+      let elemento = document.getElementById("image"); 
+      function cambiarImagen() {
+        indiceAct = (indiceAct + 1) % imagenes.length; 
+        elemento.style.backgroundImage = `url(${imagenes[indiceAct]})`; 
+      }
+      let interval = setInterval(cambiarImagen, 3000);
+      imageElement.addEventListener('mousedown', function() {
+        clearInterval(interval); 
+      });
+      imageElement.addEventListener('mouseup', function() {
+        interval = setInterval(cambiarImagen, 3000); // Reanudar el carrusel
+      });
+      imageElement.style.backgroundImage = `url(${imagenes[currentImageIndex]})`;
     }
     window.onload=gestorEventos;
   </script>
