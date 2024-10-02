@@ -11,46 +11,43 @@
       foto.onclick = function(){
         alert("Has hecho click en la imagen");
       }
-    }
-    
-    window.onload=gestorEventos;
-
-    //Ejercicio 2
-    function despejar(element) {
-      if (element.value === 'tu@email') {
-        element.value = '';
+      //Ejercicio 2
+      function despejar(element) {
+        if (element.value === 'tu@email') {
+          element.value = '';
+        }
       }
-    }
-    function restaurar(element) {
-      if (element.value === '') {
-        element.value = 'tu@email';
+      function restaurar(element) {
+        if (element.value === '') {
+          element.value = 'tu@email';
+        }
       }
-    }
-
-    // Ejercicio 3
-    document.addEventListener('DOMContentLoaded', function() {
-      let combo = document.getElementById('combobox');
-      combo.addEventListener('change', function(event) {
-        let micombo = event.target;
-        console.log(`Has seleccionado: ${micombo.options[micombo.selectedIndex].text}`);
+      // Ejercicio 3
+      document.addEventListener('DOMContentLoaded', function() {
+        let combo = document.getElementById('combobox');
+        combo.addEventListener('change', function(event) {
+          let micombo = event.target;
+          console.log(`Has seleccionado: ${micombo.options[micombo.selectedIndex].text}`);
+        });
       });
-    });
 
-    //Ejercicio 4
-    function log(){
-      event.preventDefault(); 
-      document.getElementById('user').value = 'tu@email'; 
-      document.getElementById('pass').value = '';
+      //Ejercicio 4
+      function log(){
+        event.preventDefault(); 
+        document.getElementById('user').value = 'tu@email'; 
+        document.getElementById('pass').value = '';
+      }
+
+      //Ejercicio 5
+      const imagenes = [
+        "images/fresas.jpg",
+        'images/limones.jpg'
+      ]
+      function carrusel(){
+
+      }
     }
-
-    //Ejercicio 5
-    const imagenes = [
-      "images/fresas.jpg",
-      'images/limones.jpg'
-    ]
-    function carrusel(){
-
-    }
+    window.onload=gestorEventos;
 </script>
 </head>
 <body>
