@@ -12,16 +12,19 @@
         alert("Has hecho click en la imagen");
       }
       //Ejercicio 2
-      function despejar(element) {
-        if (element.value === 'tu@email') {
-          element.value = '';
+      var usuario = document.getElementById("usuario");
+      usuario.value = "tu@email.com";
+      usuario.onblur=function(){
+        if(usuario.value=="") {
+          usuario.value="tu@email.com";
         }
       }
-      function restaurar(element) {
-        if (element.value === '') {
-          element.value = 'tu@email';
+      usuario.onfocus = function() {
+        if(usuario.value=="tu@email.com") {
+          usuario.value="";
         }
       }
+
       // Ejercicio 3
       document.addEventListener('DOMContentLoaded', function() {
         let combo = document.getElementById('combobox');
@@ -72,8 +75,8 @@
     </div>
     </div>
   <div id="login"><form id="form" method="post" action="http://YOUR_DOMAIN_HERE/login/login.php" onsubmit="log()">
-  Username: <input type="text" name="username" size="15" id="user" value="tu@email" onfocus="despejar(this)" onblur="restaurar(this)" /><br /><br />
-  Password: <input type="password" name="passwort" id="pass" size="15" /><br />
+  Username: <input type="text" name="username" size="15" id="user" /><br />
+  <br />Password: <input type="password" name="passwort" id="pass" size="15" /><br />
   <div align="center">
   <br /><input type="submit" value="Login" />
   </div>
