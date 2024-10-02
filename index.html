@@ -8,8 +8,10 @@
     //Ejercicio 1
     function gestorEventos() {
       var imagen = document.getElementById("imagen");
-      imagen.onclick(alert("Has hecho click en la imagen"));
+      imagen.onclick = function(){
+        alert("Has hecho click en la imagen");
       }
+    }
     
     window.onload=gestorEventos;
 
