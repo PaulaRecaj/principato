@@ -13,14 +13,14 @@
       }
       //Ejercicio 2
       var usuario = document.getElementById("user");
-      usuario.value = "tu@email.com";
+      usuario.value = "tu@email";
       usuario.onblur=function(){
         if(usuario.value=="") {
-          usuario.value="tu@email.com";
+          usuario.value="tu@email";
         }
       }
       usuario.onfocus = function() {
-        if(usuario.value=="tu@email.com") {
+        if(usuario.value=="tu@email") {
           usuario.value="";
         }
       }
