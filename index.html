@@ -24,19 +24,16 @@
           usuario.value="";
         }
       }
-
       // Ejercicio 3
-      document.addEventListener('DOMContentLoaded', function() {
-        let combo = document.getElementById('combobox');
-        combo.addEventListener('change', function(event) {
-          let micombo = event.target;
-          console.log(`Has seleccionado: ${micombo.options[micombo.selectedIndex].text}`);
-        });
+      var combo = document.getElementById('combobox');
+      combo.addEventListener('change', function(event) {
+        let micombo = event.target;
+        console.log(`Has seleccionado: ${micombo.options[micombo.selectedIndex].text}`);
       });
 
       //Ejercicio 4
       var log = document.getElementById("login");
-      log.onsubmit = function(){
+      log.onsubmit = function(event){
         event.preventDefault(); 
         document.getElementById("user").value = "tu@email"; 
         document.getElementById("pass").value = "";
