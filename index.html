@@ -58,13 +58,13 @@
         elemento.style.backgroundImage = `url(${imagenes[indiceAct]})`; 
       }
       let interval = setInterval(cambiarImagen, 3000);
-      imageElement.addEventListener('mousedown', function() {
+      elemento.addEventListener('mousedown', function() {
         clearInterval(interval); 
       });
-      imageElement.addEventListener('mouseup', function() {
+      elemento.addEventListener('mouseup', function() {
         interval = setInterval(cambiarImagen, 3000); // Reanudar el carrusel
       });
-      imageElement.style.backgroundImage = `url(${imagenes[currentImageIndex]})`;
+      elemento.style.backgroundImage = `url(${imagenes[indiceAct]})`;
     }
     window.onload=gestorEventos;
   </script>
