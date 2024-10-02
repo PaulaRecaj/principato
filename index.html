@@ -6,10 +6,12 @@
   <link href="css/style.css" rel="stylesheet" />
   <script>
     //Ejercicio 1
-    function inicializarGestores() {
+    function gestorEventos() {
       var imagen = document.getElementById("imagen");
-      imagen.onclick = alert("Has hecho click en la imagen");
-    }
+      imagen.onclick(alert("Has hecho click en la imagen"));
+      }
+    
+    window.onload=gestorEventos;
 
     //Ejercicio 2
     function despejar(element) {
