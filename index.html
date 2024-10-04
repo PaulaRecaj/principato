@@ -8,8 +8,13 @@
     function gestorEventos() {
       //Ejercicio 1
       var foto = document.getElementById("image");
+      let isClickProlongado = false; 
+      let clickTimeout;
       foto.onclick = function(){
-        alert("Has hecho click en la imagen");
+        if (!isClickProlongado) {
+          alert("Has hecho click en la imagen");
+        }
+        isClickProlongado = false;
       }
 
       //Ejercicio 2
@@ -61,9 +66,12 @@
       let interval = setInterval(cambiarImagen, 3000);
       elemento.addEventListener('mousedown', function() {
         clearInterval(interval); 
+        clickTimeout = setTimeout(function() {
+          isClickProlongado = true; // Si pasa cierto tiempo, se considera click prolongado
+        }, 500);
       });
       elemento.addEventListener('mouseup', function() {
-        elemento.oncl
+        clearTimeout(clickTimeout);
         interval = setInterval(cambiarImagen, 3000); 
       });
       elemento.style.backgroundImage = `url(${imagenes[indiceAct]})`;
